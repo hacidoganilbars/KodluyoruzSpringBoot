@@ -34,5 +34,5 @@ build/
 
 
 ##Specific##
-.log/
 log/
+memory_persist/
