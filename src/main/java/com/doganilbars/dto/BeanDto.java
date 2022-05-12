@@ -15,4 +15,16 @@ public class BeanDto {
     private Long beanId;
     private String beanName;
     private String beanData;
+
+    //başlangıç
+    public void initialBean(){
+        log.info("Bean başlamadan önce çalıştı");
+        System.out.println("Bean başlamadan önce çalışacak method");
+    }
+
+    //bitiş
+    public void destroyBean(){
+        log.info("Bean bittikten sonra çalıştı");
+        System.err.println("Bean bittikten sonra çalışacak method");
+    }
 }
