@@ -1,9 +1,13 @@
 package com.doganilbars.controller;
 
+import com.doganilbars.dto.ProductDto;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
+
+import java.util.ArrayList;
+import java.util.List;
 
 @Controller
 public class ThymeleafController {
@@ -36,5 +40,32 @@ public class ThymeleafController {
     public String getThymeleaf4Model(Model model){
         model.addAttribute("key_model1","Ben Modelden geldim-1");
         return "thymeleaf4";
+    }
+
+    /////////////////////////////////////////////////////////////////////////////////////////////
+    //Model Object Göndermek
+    //localhost:8080/thymeleaf5
+    @GetMapping("/thymeleaf5")
+    public String getThymeleaf5ModelObject(Model model){
+        model.addAttribute("key_model1","text");
+        ProductDto productDto = ProductDto.builder().productId(1L).productName("Ürün Adi 1").productPrice(1500).build();
+        model.addAttribute("product",productDto );
+        return "thymeleaf5";
+    }
+
+    //Model Object List Göndermek
+    //localhost:8080/thymeleaf6
+    @GetMapping("/thymeleaf6")
+    public String getThymeleaf6ModelObjectList(Model model){
+        model.addAttribute("key_model1","text");
+        List<ProductDto> listem = new ArrayList<>();
+        listem.add(ProductDto.builder().productId(1L).productName("Ürün Adi 1").productPrice(1500).build());
+        listem.add(ProductDto.builder().productId(2L).productName("Ürün Adi 2").productPrice(2500).build());
+        listem.add(ProductDto.builder().productId(3L).productName("Ürün Adi 3").productPrice(3500).build());
+        listem.add(ProductDto.builder().productId(4L).productName("Ürün Adi 4").productPrice(4500).build());
+        listem.add(ProductDto.builder().productId(5L).productName("Ürün Adi 5").productPrice(5500).build());
+        listem.add(ProductDto.builder().productId(6L).productName("Ürün Adi 6").productPrice(6500).build());
+        model.addAttribute("products",listem);
+        return "thymeleaf6";
     }
 }
