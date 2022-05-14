@@ -1,4 +1,4 @@
-package com.doganilbars.entity;
+package com.doganilbars.data.entity;
 
 import lombok.Getter;
 import lombok.Setter;
