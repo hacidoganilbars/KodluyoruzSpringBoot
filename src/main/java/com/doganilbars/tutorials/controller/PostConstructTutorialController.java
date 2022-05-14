@@ -1,4 +1,4 @@
-package com.doganilbars.controller;
+package com.doganilbars.tutorials.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;

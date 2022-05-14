@@ -1,6 +1,6 @@
-package com.doganilbars.config;
+package com.doganilbars.tutorials.config;
 
-import com.doganilbars.dto.BeanDto;
+import com.doganilbars.tutorials.dto.BeanDto;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Scope;

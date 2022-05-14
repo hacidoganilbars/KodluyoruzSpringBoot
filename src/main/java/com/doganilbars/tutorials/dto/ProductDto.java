@@ -1,4 +1,4 @@
-package com.doganilbars.dto;
+package com.doganilbars.tutorials.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

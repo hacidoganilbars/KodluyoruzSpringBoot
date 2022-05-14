@@ -1,6 +1,6 @@
-package com.doganilbars.controller;
+package com.doganilbars.tutorials.controller;
 
-import com.doganilbars.config.BeanConfig;
+import com.doganilbars.tutorials.config.BeanConfig;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
