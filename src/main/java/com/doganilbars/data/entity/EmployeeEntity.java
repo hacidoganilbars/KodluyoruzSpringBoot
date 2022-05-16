@@ -1,5 +1,6 @@
 package com.doganilbars.data.entity;
 
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.extern.log4j.Log4j2;
@@ -12,6 +13,7 @@ import java.io.Serializable;
 @Data
 @NoArgsConstructor
 @Log4j2
+@Builder
 @Entity
 @Table(name = "employees")
 public class EmployeeEntity extends BaseEntity implements Serializable {
